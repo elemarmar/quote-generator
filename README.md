@@ -108,9 +108,25 @@ if (data.quoteAuthor === '') {
 }
 ```
 
+<br />
+
+**Creating the twitter button**
+
+When clicked, it opens twitter and automatically generates a tweet with the quote and its author ready to be published! 👉🏻 Used [Twitter API](https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/guides/web-intent).
+
+Using the method `window.open(twitterUrl, '_blank')` loads the url that we pass in (in this case the personalised twitter url) into a new or existing browsing context ([ref](https://developer.mozilla.org/en-US/docs/Web/API/Window/open))
+
+
+
+
+
 
 
 <br />
+
+**Creating functionality for the 'new quote' button**
+
+We add an event listener to the button that fires the already defined function `getQuote()`
 
 ### 3. Creating a loader
 
