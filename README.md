@@ -1,18 +1,19 @@
 # ❝ Quote generator
 
-
-
-%image%
+![cover](cover.png)
 
 
 
 This app displays a random quote retrieved from the [forismatic API](https://forismatic.com/en/api/) and allows the user to share such quote through twitter or load another one. 
 
-🧰 This project is built using JavaScript (ES6), CSS, HTML, AJAX requests, third-party API and a loader.
+🧰 This project is built using:
 
+- JavaScript (ES6), CSS, HTML
+- AJAX requests
+- third-party API ([forismatic API](https://forismatic.com/en/api/) )
+- Creating a loader.
 
-
-- Built own proxy server 
+- Own proxy server 
 
 <br />
 
