@@ -45,7 +45,6 @@ async function getQuote() {
     elements.quoteText.innerText = data.quoteText;
     clearLoader();
   } catch (error) {
-    // getQuote();
     getQuote();
     console.log('No quote', error);
   }
