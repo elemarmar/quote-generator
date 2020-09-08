@@ -33,7 +33,7 @@ This app displays a random quote retrieved from the [forismatic API](https://for
 
 ### 1. Fetching the data 
 
-The base data for making requests to the API is `http://api.forismatic.com/api/1.0/`. We want to use an asynchronous function to fetch the data. 
+The url for making requests to the API is `http://api.forismatic.com/api/1.0/`. We want to use an asynchronous function to fetch the data. 
 
 <br />
 
@@ -42,7 +42,7 @@ The base data for making requests to the API is `http://api.forismatic.com/api/1
 ```js
 // Get quote from API
 async function  getQuote() {
-  const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+  const proxyUrl = 'url-to-my-proxy-server-built-with-heroku';
   const apiUrl = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
   
   try {
@@ -59,9 +59,7 @@ async function  getQuote() {
 getQuote();
 ```
 
-By default, the fetch request uses a CORS policy: by default if you call an API from a different origin (we are at localhost) by default is blocked. This happens a lot with free APIs that are not configured to send CORS headers which would allow it to work. 
-
-To solve the problem of... we call first a Proxy API and then our API.
+⚠️ The fetch request use a **CORS policy**: by default if you call an API from a different origin it gets blocked. This happens a lot with free APIs that are not configured to send CORS headers which would allow it to work to solve this problem I build my own proxy server using Heroku.
 
 <br />
 
@@ -160,14 +158,6 @@ We implement these two functions in our function `getQuote`
 
 
 <br />
-
----
-
-<br />
-
-## Review
-
-This pro
 
 
 
