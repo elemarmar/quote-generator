@@ -8,13 +8,11 @@ const elements = {
   loader: document.getElementById('loader'),
 };
 
-// Display Loader
-function loading() {
+function showLoader() {
   elements.quoteContainer.hidden = true;
   elements.loader.hidden = false;
 }
 
-// Clear Loader
 function clearLoader() {
   elements.quoteContainer.hidden = false;
   elements.loader.hidden = true;
@@ -27,7 +25,7 @@ async function getQuote() {
     'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
 
   try {
-    loading();
+    showLoader();
     const response = await fetch(proxyUrl + apiUrl);
     const data = await response.json();
 

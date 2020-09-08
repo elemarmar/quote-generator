@@ -137,7 +137,7 @@ We add an event listener to the button that fires the already defined function `
 A new div is added to the html that will serve as the loader. We create a new function `loading()` that targets the loader element:
 
 ```js
-function loading() {
+function showLoader() {
   elements.loader.hidden = false;
   elements.quoteContainer.hidden = true;
 }
