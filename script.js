@@ -5,7 +5,20 @@ const elements = {
   authorText: document.getElementById('author'),
   twitterBtn: document.getElementById('twitter'),
   newQuoteBtn: document.getElementById('new-quote'),
+  loader: document.getElementById('loader'),
 };
+
+// Display Loader
+function loading() {
+  elements.quoteContainer.hidden = true;
+  elements.loader.hidden = false;
+}
+
+// Clear Loader
+function clearLoader() {
+  elements.quoteContainer.hidden = false;
+  elements.loader.hidden = true;
+}
 
 // Get Quote from API
 async function getQuote() {
@@ -14,6 +27,7 @@ async function getQuote() {
     'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
 
   try {
+    loading();
     const response = await fetch(proxyUrl + apiUrl);
     const data = await response.json();
 
@@ -31,6 +45,7 @@ async function getQuote() {
       elements.quoteText.classList.remove('long-quote');
     }
     elements.quoteText.innerText = data.quoteText;
+    clearLoader();
   } catch (error) {
     // getQuote();
     getQuote();

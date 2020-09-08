@@ -128,7 +128,31 @@ Using the method `window.open(twitterUrl, '_blank')` loads the url that we pass 
 
 We add an event listener to the button that fires the already defined function `getQuote()`
 
+<br />
+
+
+
 ### 3. Creating a loader
+
+A new div is added to the html that will serve as the loader. We create a new function `loading()` that targets the loader element:
+
+```js
+function loading() {
+  elements.loader.hidden = false;
+  elements.quoteContainer.hidden = true;
+}
+
+function clearLoading() {
+  if (!loader.hidden) {
+    elements.quoteContainer.hidden = false;
+    elements.loader.hidden = true;
+  }
+}
+```
+
+👉🏻 `.hidden` is a property of any HTML element which is `true` if the element is hidden; otherwise `false` ([ref](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden)).
+
+We implement these two functions in our function `getQuote`
 
 
 
