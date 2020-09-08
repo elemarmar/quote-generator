@@ -72,6 +72,9 @@ button:active {
   box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
 
+.quote-button:hover {
+  color: #82cc9a;
+}
 .twitter-button:hover {
   color: #38a1f3;
 }
